@@ -18,3 +18,15 @@ function selectItem(e) {
   const tabContentItem = document.querySelector(`#${this.id}-content`);
   tabContentItem.ContentItem.classList.add("show");
 }
+
+//listen for tab item clicks
+tabItems.forEach((item) => {
+  item.addEventListener("click", selectItem);
+});
+
+//remove show class from content
+function removeShow() {
+  tabContentItems.forEach((item) => {
+    item.classList.remove("show");
+  });
+}
